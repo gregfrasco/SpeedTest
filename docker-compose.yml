@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:10
+  web:
+    build: .
+    command: npm start
+    volumes:
+      - .:/server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

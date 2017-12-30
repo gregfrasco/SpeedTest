@@ -1,0 +1,17 @@
+{
+  "name": "SpeedTest",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.x.x",
+    "hapi": "16.x.x",
+    "hapi-cron": "0.0.3",
+    "inert": "4.x.x",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.28.6",
+    "vision": "4.x.x"
+  }
+}
