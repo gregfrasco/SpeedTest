@@ -4,6 +4,15 @@
   "scripts": {
     "start": "node index.js"
   },
+  "author": "Greg Frasco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregfrasco/SpeedTest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregfrasco/SpeedTest.git"
+  },
   "dependencies": {
     "handlebars": "^4.x.x",
     "hapi": "16.x.x",

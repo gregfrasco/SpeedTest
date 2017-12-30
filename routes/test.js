@@ -15,10 +15,9 @@ module.exports = function () {
 
         }
     },{
-        method: 'GET',
+        method: 'POST',
         path: '/test',
         handler: function (request, reply) {
-            console.log('Start Speedtest')
             Speedtest().then(results => {
                 const test = {
                     testID: uuidv4(),

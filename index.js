@@ -10,10 +10,14 @@ server.connection({
 });
 
 server.register(require('vision'),(err) => {
-    console.log(err);
+    if(err) {
+        console.log(err);
+    }
 });
 server.register(require('inert'),(err) => {
-    console.log(err);
+    if(err) {
+        console.log(err);
+    }
 });
 
 server.register({
@@ -21,16 +25,18 @@ server.register({
     options: {
         jobs: [{
             name: 'speedtest',
-            time: '0 0 * * * *',
+            time: '* * * * * *',
             timezone: 'Europe/London',
             request: {
-                method: 'GET',
+                method: 'POST',
                 url: '/test'
             }
         }]
     },
 }, (err) => {
-    console.log(err);
+    if(err) {
+        console.log(err);
+    }
 });
 
 server.views({
@@ -38,8 +44,7 @@ server.views({
         html: require('handlebars')
     },
     relativeTo: __dirname,
-    path: './views',
-    helpersPath: './helpers',
+    path: './views'
 });
 
 server.route({
