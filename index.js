@@ -25,7 +25,7 @@ server.register({
     options: {
         jobs: [{
             name: 'speedtest',
-            time: '* * * * * *',
+            time: '0 0 * * * *',
             timezone: 'Europe/London',
             request: {
                 method: 'POST',
